@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pro2?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 211314
+  mvc:
+    static-path-pattern: /pic/**
+  resources:
+    static-locations: file:d:/file/proPic/
+  jackson:
+    #指定日期格式，比如yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
+    #指定日期格式化时区
+    time-zone: GMT+8
+server:
+  port: 8083
+pagehelper:
+  helper-dialect: mysql
+logging:
+  level:
+    com.cskaoyan.mall.mapper: debug
+    com.cskaoyan.mall.service: error
+file:
+  url: d:/file/proPic/
+mybatis:
+  type-handlers-package: com.cskaoyan.mall.typehandler
+

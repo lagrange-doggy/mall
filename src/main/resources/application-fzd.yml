@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cskaoyanmall?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+  mvc:
+    static-path-pattern: /pic/**
+  resources:
+    static-locations: file:c:/Users/24039/Pictures/pic/
+server:
+  port: 8083
+pagehelper:
+  helper-dialect: mysql
+jackson:
+  date-format: yyyy-MM-dd HH:mm:ss
+  time-zone: GMT+8
+logging:
+  level:
+    com.cskaoyan.mall.mapper: debug
+    com.cskaoyan.mall.service: error
+file:
+  url: c:/Users/24039/Pictures/pic/
+mybatis:
+  type-handlers-package: com.cskaoyan.mall.typehandler
+aliyun:
+  accessKeyId: LTAI4Fr5gfYhcVjLMqeRGbuT
+  accessKeySecret: IrkcHu6dZyrjPZRushgO76P5392HJ1
+  oss:
+    bucket: cskaoyan
+    endPoint: oss-cn-beijing.aliyuncs.com
+  sms:
+    signName: stone4j
+    templateCode: SMS_173765187
